@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inicio">
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Bienvenido"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/cerrarsesion"
+        android:layout_width="123dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:text="Cerrar Sesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtobservaciones" />
+
+    <Button
+        android:id="@+id/btnAgregarImagen"
+        android:layout_width="123dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:text="Agregar Imagen"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuardar"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toEndOf="@+id/cerrarsesion"
+        app:layout_constraintTop_toBottomOf="@+id/datos_observaciones" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="BIENVENIDO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txttecnico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="37dp"
+        android:text="Tecnico"
+        app:layout_constraintBottom_toTopOf="@+id/txtestablecimiento"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/datos_tecnico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/datos_establecimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/datos_tecnico"
+        app:layout_constraintTop_toBottomOf="@+id/datos_tecnico" />
+
+    <TextView
+        android:id="@+id/txtestablecimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Establecimiento"
+        app:layout_constraintBottom_toBottomOf="@+id/datos_establecimiento"
+        app:layout_constraintEnd_toEndOf="@+id/txttecnico"
+        app:layout_constraintStart_toEndOf="@+id/txttecnico" />
+
+    <TextView
+        android:id="@+id/txtfecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="32dp"
+        android:text="Fecha"
+        app:layout_constraintBottom_toTopOf="@+id/txtobservaciones"
+        app:layout_constraintEnd_toEndOf="@+id/cerrarsesion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/datos_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/datos_establecimiento"
+        app:layout_constraintTop_toBottomOf="@+id/datos_establecimiento" />
+
+    <TextView
+        android:id="@+id/txtobservaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observaciones"
+        app:layout_constraintBaseline_toBaselineOf="@+id/datos_observaciones"
+        app:layout_constraintEnd_toEndOf="@+id/txtfecha"
+        app:layout_constraintStart_toEndOf="@+id/txtfecha" />
+
+    <EditText
+        android:id="@+id/datos_observaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/datos_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/datos_fecha" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Guardar "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datos_observaciones" />
+</androidx.constraintlayout.widget.ConstraintLayout>
